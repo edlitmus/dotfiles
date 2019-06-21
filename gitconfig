@@ -1,0 +1,107 @@
+[user]
+  name = Ed Silva
+  email = ed@edlitmus.info
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
+[diff "blackbox"]
+    textconv = gpg --use-agent -q --batch --decrypt
+[core]
+    editor = emacs
+    excludesfile = ~/.gitignore
+[push]
+    default = matching
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[github]
+    user = edlitmus
+    token = 
+[alias]
+    #############
+    b = branch
+    #############
+    cam = commit -am
+    #############
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    #############
+    d = diff
+    dc = diff --cached
+    dl = difftool
+    dlc = difftool --cached
+    dk = diff --check
+    dp = diff --patience
+    dck = diff --cached --check
+    #############
+    f = fetch
+    fo = fetch origin
+    fu = fetch upstream
+    #############
+    fp = format-patch
+    #############
+    fk = fsck
+    #############
+    g = grep -p
+    #############
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    #############
+    ls = ls-files
+    lsf = "!git ls-files | grep -i"
+    #############
+    m = merge
+    ma = merge --abort
+    mc = merge --continue
+    ms = merge --skip
+    #############
+    co = checkout
+    cob = checkout -b
+    #############
+    ps = push
+    pso = push origin
+    psom = push origin master
+    #############
+    pl = pull
+    plu = pull -u
+    plo = pull origin
+    plp = pull upstream
+    plom = pull origin master
+    plpm = pull upstream master
+    #############
+    pb = pull --rebase
+    pbo = pull --rebase origin
+    pbp = pull --rebase upstream
+    pbom = pull --rebase origin master
+    pbpm = pull --rebase upstream master
+    #############
+    rv = remote -v
+    #############
+    st = status
+    #############
+    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+    #############
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

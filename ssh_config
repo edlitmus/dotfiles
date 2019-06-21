@@ -1,0 +1,15 @@
+Host *
+    ForwardAgent yes
+    TCPKeepAlive yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 60
+
+# Host example
+#     HostName some-host.example.com
+#     StrictHostKeyChecking no
+#     UserKnownHostsFile /dev/null
+#     Identityfile ~/.ssh/id_rsa_example.pub
+#     ProxyJump jump-host
+#     IdentitiesOnly yes
+#     Port 12345
+#     User username
