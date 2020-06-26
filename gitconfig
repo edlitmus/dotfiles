@@ -74,20 +74,20 @@
     #############
     ps = push
     pso = push origin
-    psom = push origin master
+    psom = push origin main
     #############
     pl = pull
     plu = pull -u
     plo = pull origin
     plp = pull upstream
-    plom = pull origin master
-    plpm = pull upstream master
+    plom = pull origin main
+    plpm = pull upstream main
     #############
     pb = pull --rebase
     pbo = pull --rebase origin
     pbp = pull --rebase upstream
-    pbom = pull --rebase origin master
-    pbpm = pull --rebase upstream master
+    pbom = pull --rebase origin main
+    pbpm = pull --rebase upstream main
     #############
     rv = remote -v
     #############
